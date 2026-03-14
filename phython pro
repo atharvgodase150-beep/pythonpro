@@ -1,0 +1,21 @@
+import pandas as pd
+
+data = {
+    "Name": ["Rahul", "Sneha", "Amit", "Pooja", "Ravi"],
+    "Marks": [78, 92, 56, 64, 45]
+}
+
+df = pd.DataFrame(data)
+
+print("Student Data")
+print(df)
+
+print("\nAverage Marks:", df["Marks"].mean())
+
+print("Highest Marks:", df["Marks"].max())
+
+print("\nStudents Passed:")
+
+passed = df[df["Marks"] >= 50]
+
+print(passed)
